@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">Calories Calulator</string>
+    <string name="app_name">Calories Calculator</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_success">Please login your email and password\n\nTAP TO LOGIN</string>
+
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal\n(healthy weight)</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese Class I\n(Moderately obese)</string>
+    <string name="obese_class_ii">Obese Class II\n(Severely obese)</string>
+    <string name="obese_class_iii">Obese Class III\n(Very severely obese)</string>
 </resources>

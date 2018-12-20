@@ -8,5 +8,8 @@
     <color name="colorSecondPrimaryDark">#52555e</color>
     <color name="colorSecondAccent">#adb0bb</color>
 
+    <color name="success">#94c745</color>
+
     <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
 </resources>

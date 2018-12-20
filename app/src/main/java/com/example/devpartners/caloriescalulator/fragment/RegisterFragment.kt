@@ -20,6 +20,11 @@ import org.greenrobot.eventbus.EventBus
 class RegisterFragment : Fragment() {
     var login : TextView? = null
     var signup : Button? = null
+    var nameEdit : android.support.design.widget.TextInputEditText? = null
+    var numberEdit : android.support.design.widget.TextInputEditText? = null
+    var emailEdit : android.support.design.widget.TextInputEditText? = null
+    var passEdit : android.support.design.widget.TextInputEditText? = null
+    var confirmpassEdit : android.support.design.widget.TextInputEditText? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view = inflater.inflate(R.layout.fragment_register, container, false)
@@ -28,7 +33,13 @@ class RegisterFragment : Fragment() {
             EventBus.getDefault().post(LoginEvent())
         }
         signup?.setOnClickListener {
-            EventBus.getDefault().post(SignUpEvent())
+
+            EventBus.getDefault().post(SignUpEvent(nameEdit?.text.toString(),
+                    numberEdit?.text.toString(),
+                    emailEdit?.text.toString(),
+                    passEdit?.text.toString(),
+                    confirmpassEdit?.text.toString()
+                    ))
         }
         return view
     }
@@ -36,5 +47,10 @@ class RegisterFragment : Fragment() {
     private fun setvariables(view: View) {
         login = view.findViewById(R.id.backText)
         signup = view.findViewById(R.id.signup)
+        nameEdit = view.findViewById(R.id.nameEdit)
+        numberEdit = view.findViewById(R.id.numberEdit)
+        emailEdit = view.findViewById(R.id.emailEdit)
+        passEdit = view.findViewById(R.id.passEdit)
+        confirmpassEdit = view.findViewById(R.id.confirmpassEdit)
     }
 }

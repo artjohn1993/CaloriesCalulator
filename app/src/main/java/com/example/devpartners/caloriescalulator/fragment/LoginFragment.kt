@@ -21,6 +21,8 @@ import org.greenrobot.eventbus.EventBus
 class LoginFragment : Fragment() {
     var register : TextView? = null
     var signin : Button? = null
+    var emailEdit : android.support.design.widget.TextInputEditText? = null
+    var passwordEdit : android.support.design.widget.TextInputEditText? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view = inflater.inflate(R.layout.fragment_login, container, false)
@@ -30,13 +32,15 @@ class LoginFragment : Fragment() {
             EventBus.getDefault().post(RegisterEvent())
         }
         signin?.setOnClickListener {
-            EventBus.getDefault().post(SignInEvent())
+            EventBus.getDefault().post(SignInEvent(emailEdit?.text.toString(),passwordEdit?.text.toString() ))
         }
         return view
     }
     private fun setvariables(view: View) {
        register = view.findViewById(R.id.register)
         signin = view.findViewById(R.id.signin)
+        emailEdit = view.findViewById(R.id.emailEdit)
+        passwordEdit = view.findViewById(R.id.passwordEdit)
     }
 
 }

@@ -36,4 +36,10 @@ dependencies {
     implementation 'org.jetbrains.anko:anko:0.10.4'
     implementation 'org.greenrobot:eventbus:3.1.1'
 
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-database:16.0.3'
+
+    implementation "com.priyankvasa.android:cameraview-ex:2.2.2"
 }
+apply plugin: 'com.google.gms.google-services'

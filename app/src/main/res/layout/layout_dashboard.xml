@@ -17,27 +17,66 @@
             android:padding="@dimen/padding_s"
             >
             <TextView
-                android:id="@+id/duration"
+                android:id="@+id/bmiStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="15 mins"
+                android:textAlignment="center"
                 android:background="@drawable/color_accent_rounded"
                 android:padding="@dimen/padding_s"
                 android:textColor="@color/colorWhite"/>
             <TextView
+                android:id="@+id/time"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Nov 10, 2018 1:00 PM"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/duration"
+                app:layout_constraintEnd_toStartOf="@id/bmiStatus"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textColor="@color/colorSecondPrimary"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Burned calories : 600"
+                app:layout_constraintTop_toBottomOf="@id/time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bmiStatus"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textColor="@color/colorSecondPrimary"
+                android:layout_marginTop="@dimen/margin_s"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="weight : 60 kilo"
+                app:layout_constraintTop_toBottomOf="@id/calories"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bmiStatus"
                 android:layout_marginRight="@dimen/margin_m"
                 android:textColor="@color/colorSecondPrimary"
                 android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="duration : 10 mins"
+                app:layout_constraintTop_toBottomOf="@id/weight"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bmiStatus"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textColor="@color/colorSecondPrimary"
+                android:textSize="16sp"/>
+
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.CardView>
